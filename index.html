@@ -1,23 +1,34 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>ИП Спиридонов</title>
+</head>
 
-    <title>ИП Спиридонов</title>
-  </head>
-  <body>
-    <form action="https://yoomoney.ru/eshop.xml" method="post">
-    <input required name="shopId" value="799825" type="hidden"/>
-    <input required name="scid" value="2110029" type="hidden"/>
-    <input required name="sum" value="" type="number" min="1" placeholder="Укажите сумму платежа"><br>
-    Что рекламируем (<font color="red">*</font>):<br>
-    <input required name="customerNumber" value="" size="64"/><br>
-    <input type="submit" value="Оплатить">
-    </form>
-  </body>
+<body>
+  <div class="container mt-3">
+    <div class="row">  
+        <form action="https://yoomoney.ru/eshop.xml" method="post">
+          <div class="form-col">
+            <input required name="shopId" value="799825" type="hidden" />
+            <input required name="scid" value="2110029" type="hidden" />
+            <div class="form-group row">
+              <label for="inputSum" class="col-lg-4 col-form-label">Сумма платежа в рублях:</label>
+              <input required name="sum" value="" type="number" min="1" id="inputSum" class="col-lg-2 col-2 ml-3" />
+            </div>
+            <div class="form-group row">
+              <label for="inputCustomerNumber" class="col-lg-4 col-form-label">Что рекламируем:*</label>
+              <input required name="customerNumber" value="" size="64" id="inputCustomerNumber" class="col-lg-7 col-7 ml-3" />
+            </div>
+            <button type="submit" class="btn btn-primary" class="col-lg-12 col-12 ml-3">Оплатить</button>
+          </div>
+        </form>
+    </div>
+  </div>
+</body>
+
 </html>
